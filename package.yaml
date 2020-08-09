@@ -1,34 +1,27 @@
-name:                project-functional
-version:             0.1.0.0
-github:              "def4alt/project-functional"
-license:             MIT
-author:              "Def4alt"
-maintainer:          "bronzemonet@gmail.com"
-copyright:           "2020 Def4alt"
+name: project-functional
+version: 0.1.0.0
+github: "def4alt/project-functional"
+license: MIT
+author: "Andrii Olkhovych"
+maintainer: "bronzemonet@gmail.com"
+copyright: "2020 Andrii Olkhovych"
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/def4alt/project-functional#readme>
+description: Please see the README on GitHub at <https://github.com/def4alt/project-functional#readme>
 
 dependencies:
-- base >= 4.7 && < 5
+- base
 
 library:
   source-dirs: src
 
 executables:
   project-functional-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
     ghc-options:
     - -threaded
     - -rtsopts
@@ -38,11 +31,12 @@ executables:
 
 tests:
   project-functional-test:
-    main:                Spec.hs
-    source-dirs:         test
+    main: Spec.hs
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    source-dirs: test
     dependencies:
     - project-functional
+    - hspec

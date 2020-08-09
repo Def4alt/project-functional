@@ -1,0 +1,10 @@
+cradle:
+  stack:
+    - path: "./app/"
+      component: "project-functional:exe:project-functional-exe"
+    - path: "./src/"
+      component: "project-functional:lib"
+    - path: "./test/"
+      component: "project-functional:test:project-functional-test"
+    - path: "./Setup.hs"
+      component: "Cabal"
