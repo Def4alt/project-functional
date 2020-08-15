@@ -31,7 +31,7 @@ executables:
 
 tests:
   project-functional-test:
-    main: Spec.hs
+    main: Driver.hs
     ghc-options:
     - -threaded
     - -rtsopts
@@ -39,4 +39,6 @@ tests:
     source-dirs: test
     dependencies:
     - project-functional
-    - hspec
+    - tasty
+    - tasty-hunit
+    - tasty-discover
